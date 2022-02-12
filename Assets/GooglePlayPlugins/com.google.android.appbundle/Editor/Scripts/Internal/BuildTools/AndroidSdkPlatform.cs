@@ -42,6 +42,8 @@ namespace Google.Android.AppBundle.Editor.Internal.BuildTools
 
         public virtual bool Initialize(BuildToolLogger buildToolLogger)
         {
+            Debug.Log("Phuong Initialize AndroidSDKPlatform");
+
             if (!_androidSdk.Initialize(buildToolLogger))
             {
                 return false;
@@ -87,6 +89,7 @@ namespace Google.Android.AppBundle.Editor.Internal.BuildTools
             var targetSdkVersion = PlayerSettings.Android.targetSdkVersion;
             if (targetSdkVersion == AndroidSdkVersions.AndroidApiLevelAuto || (int) targetSdkVersion >= MinimumVersion)
             {
+                Debug.Log("Phuong - Target SDK version met");
                 return true;
             }
 
