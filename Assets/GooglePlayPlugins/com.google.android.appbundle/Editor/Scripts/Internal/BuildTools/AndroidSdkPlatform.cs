@@ -58,6 +58,14 @@ namespace Google.Android.AppBundle.Editor.Internal.BuildTools
                 return false;
             }
 
+            /*
+            var targetSdkVer = PlayerSettings.Android.targetSdkVersion;
+            if ((int)targetSdkVer >= MinimumVersion)
+            {
+                return true;
+            }
+            */
+
             if (newestVersion < MinimumVersion)
             {
                 var installedVersionMessage = string.Format(
